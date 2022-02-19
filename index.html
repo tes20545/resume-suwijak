@@ -7,12 +7,413 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <title>Hello, world!</title>
+    <title>Suwijak Srikhao</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="text-center">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="cert.html">Certificate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Resume</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!--Nav end-->
+<style>
+body{
+    background-color:#1c1819!important;
+    color:white;
+    font-family: 'Kanit', sans-serif;
+}
+h1{
+    text-align: center;
+    padding:26rem;
+    color:white;
+}
+.bg-dark{
+    background-color:#1c1819!important;
+}
 
+:root {
+  --surface-color: #1c1819;
+  --curve: 40;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;  
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;      
+  border-radius: calc(var(--curve) * 1px);    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;    
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #ffffff;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #ffffff;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #ffffff;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #ffffff;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  background-color:#1c1819;
+}    
+</style>
+  <body>
+    <div class="container-fluid" style="background-color:#1c1819">
+        <h1>Suwijak Srikhao<p class="fs-5">This website is portfolio</p>
+        <a type="submit" href="cert.html" class="btn btn-outline-light"><i class="bi bi-file-earmark-check-fill"></i>&nbsp;Certificate</a>
+    
+        </h1>
+    </div>
+
+
+
+
+    
+    <div class="container">
+
+
+        <div style="padding-top:5rem;"></div>
+                    <p class="fs-1">Freelance</p>
+        <p class="fs-4">มกราคม 2561 - ปัจจุบัน</p>
+        <hr style="color:white">
+
+                    <ul class="cards">
+                        <li>
+                          <a href="" class="card">
+                            <img src="image/12.png" class="card__image" alt="" />
+                            <div class="card__overlay">
+                              <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                <div class="card__header-text">
+                                  <h3 class="card__title">WEBSITE WORDPRESS | ผลิตภัณฑ์ชุมชนท้องถิ่น</h3>            
+                                  <span class="card__status">co-buy | 2565</span>
+                                </div>
+                              </div>
+                              <p class="card__description">เป็นโปรเจคที่ทำให้กับน้องๆนักศึกษาที่กำลังจะจบในสาขาคอมพิวเตอร์ธุรกิจ การได้ลองใช้งาน Woo-commerce และ Elementor ในระดับที่ลึกก็เป็นอะไรที่น่าสนใจมาก เพราะมันสามารถทำอะไรได้เยอะแยะมากกว่าที่คิด</p>
+                            </div>
+                          </a>      
+                        </li>
+                        </ul>
+
+
+                    <ul class="cards">
+                        <li>
+                          <a href="" class="card">
+                            <img src="image/9.png" class="card__image" alt="" />
+                            <div class="card__overlay">
+                              <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                <div class="card__header-text">
+                                  <h3 class="card__title">WEBSITE | Chamix</h3>            
+                                  <span class="card__status">Chamix | 2563</span>
+                                </div>
+                              </div>
+                              <p class="card__description">การได้ทำงานร่วมกับบริษัทเฟรนไชส์ขายน้ำเป็นอะไรที่ไม่เคยทำมาก่อน การพัฒนาแบรนด์ให้มีความน่าเชื่อถือและมั่นคงเป็นอีกหนึ่งคอนเซ็ปที่ถือว่าท้าทาย การที่จะออกแบบยังไงให้หน้าตาเว็บมีความน่าเชื่อถือและน่าใช้งาน</p>
+                            </div>
+                          </a>      
+                        </li>
+                        </ul>
+
+                <ul class="cards">
+                    <li>
+                      <a href="" class="card">
+                        <img src="image/8.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                          <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <div class="card__header-text">
+                              <h3 class="card__title">WEBSITE | ศูนย์เกษตรจังหวัดยะลา</h3>            
+                              <span class="card__status">Yala Agriculture Career | 2562</span>
+                            </div>
+                          </div>
+                          <p class="card__description">งานนี้ได้ไปดูงานและเที่ยวเล่นถึงจังหวัดยะลา ได้ไปเห็นชีวิตความเป็นอยู่ของคนยะลา ซึมซับวัฒนธรรมเพื่อนำมาถ่ายทอดลงเว็บไซต์สำหรับการจ้างงานและพัฒนาอาชีพ</p>
+                        </div>
+                      </a>      
+                    </li>
+                    </ul>
+
+                    <ul class="cards">
+                        <li>
+                          <a href="" class="card">
+                            <img src="image/7.png" class="card__image" alt="" />
+                            <div class="card__overlay">
+                              <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                <div class="card__header-text">
+                                  <h3 class="card__title">WEBSITE | เว็บไซต์คำนวณการสร้างบ้าน</h3>            
+                                  <span class="card__status">Civil X IT Team | 2561</span>
+                                </div>
+                              </div>
+                              <p class="card__description">งานนี้ถือว่าโหดมากๆ เพราะต้องใช้การคำนวณของวิศวะกรรมโยธาอีกแขนงนึง ด้วยการร่วมงานกับรุ่นพี่ที่เรียนทางนี้ การพัฒนาเว็บไซต์นี้จึงไม่ได้เน้นหนักไปทางหน้าตา แต่เน้นไปทางด้านการใช้งาน</p>
+                            </div>
+                          </a>      
+                        </li>
+                        </ul>
+                
+                        <ul class="cards">
+                            <li>
+                              <a href="" class="card">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZEhBSYCK3ueHMx5lenuCqxrl2NR-QlblZVg&usqp=CAU" class="card__image" alt="" />
+                                <div class="card__overlay">
+                                  <div class="card__header">
+                                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                    <div class="card__header-text">
+                                      <h3 class="card__title">WEBSITE | กล้องวงจรปิด</h3>            
+                                      <span class="card__status">Orange Thailand | 2561</span>
+                                    </div>
+                                  </div>
+                                  <p class="card__description">การรับงานครั้งแรกเต็มไปด้วยความตื่นเต้น และงานชิ้นแรกที่ได้รับคือการทำเว็บไซต์กล้องวงจรปิด เป็นระบบ e-commerce พื้นฐาน แต่ปิดงานยากพอสมควร การได้เรียนรู้ความผิดพลาดของตัวเองก็เป็นอีกหนึ่งสิ่งที่ยอมให้เกิดขึ้นได้ แต่การที่งานต้องล่าช้าถือว่าเป็นเรื่องที่ไม่อยากให้เกิดขึ้นมากที่สุด</p>
+                                </div>
+                              </a>      
+                            </li>
+                            </ul>
+
+
+                            <ul class="cards">
+                                <li>
+                                  <a href="" class="card">
+                                    <img src="image/10.png" class="card__image" alt="" />
+                                    <div class="card__overlay">
+                                      <div class="card__header">
+                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                        <div class="card__header-text">
+                                          <h3 class="card__title">WEBSITE | ระบบรายงานพฤติกรรมนักเรียน</h3>            
+                                          <span class="card__status">HTC | 2561</span>
+                                        </div>
+                                      </div>
+                                      <p class="card__description">เป็นครั้งแรกที่ได้ทำระบบ CRUD เต็มรูปแบบ การใช้งาน datatable และตัวแปรต่างๆของ PHP ถือเป็นอีกหนึ่งก้าวที่สำคัญในการพัฒนาตัวเอง</p>
+                                    </div>
+                                  </a>      
+                                </li>
+                                </ul>
+
+                        <div style="padding-top:5rem;"></div>
+        <p class="fs-1">กิมหยง.com</p>
+        <p class="fs-4">กุมภาพันธ์ 2564 - พฤษภาคม 2564</p>
+        <hr style="color:white">
+                <ul class="cards">
+                    <li>
+                      <a href="" class="card">
+                        <img src="image/1.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                          <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <div class="card__header-text">
+                              <h3 class="card__title">WEBSITE | กรมอุตุนิยมวิทยาภาคใต้ฝั่งตะวันตก</h3>            
+                              <span class="card__status">เมษายน 2564</span>
+                            </div>
+                          </div>
+                          <p class="card__description">การทำงานกับเว็บไซต์นี้เป็นอะไรที่ท้าทายและสนุกเช่นเดียวกัน เนื่องจากหากทำอะไรผิดพลาดจะมีผลกระทบเป็นวงกว้าง เนื่องจากเส้นทางบินจะอิงเว็บไซต์นี้เป็นหลัก การไปยุ่งกับ API นั้นค่อนข้างทำได้ยากเพราะเราไม่รู้ว่าลิงก์ไหนคือ API และเนื่องด้วยตัวเว็บไซต์นั้นทำด้วยตัว PHP Frameworks YII ที่ไม่ค่อยถนัดจึงทำให้ยิ่งท้าทายมากกว่าเดิม</p>
+                        </div>
+                      </a>      
+                    </li>
+                    </ul>
+                <ul class="cards">
+                    <li>
+                      <a href="" class="card">
+                        <img src="image/2.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                          <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <div class="card__header-text">
+                              <h3 class="card__title">WEBSITE | องค์การบริหารส่วนจังหวัดสตูล</h3>            
+                              <span class="card__status">กุมภาพันธ์ 2564</span>
+                            </div>
+                          </div>
+                          <p class="card__description">เป็นอีกหนึ่งครั้งที่ได้สนุกกับงานเพราะจะต้องเปลี่ยนจากเว็บไซต์ Statis ธรรมดาๆ ให้กลายเป็น Dynamics มีหลังบ้าน แก้ไขนู้นนี่นั่นได้โดยข้อมูลเก่ายังคงอยู่และยังคงรูปแบบเดิมไว้ </p>
+                        </div>
+                      </a>      
+                    </li>
+                    </ul>
+
+
+
+                    <div style="padding-top:5rem;"></div>
+                    <p class="fs-1">ไทยคอม</p>
+        <p class="fs-4">เมษายน 2562 - พฤษภาคม 2562</p>
+        <hr style="color:white">
+                <ul class="cards">
+                    <li>
+                      <a href="" class="card">
+                        <img src="image/3.png" class="card__image" alt="" />
+                        <div class="card__overlay">
+                          <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <div class="card__header-text">
+                              <h3 class="card__title">WEBSITE | ร้านอาหารและหน่วยงานราชการ</h3>            
+                              <span class="card__status">เมษายน 2562</span>
+                            </div>
+                          </div>
+                          <p class="card__description">การทำงานที่นี้ได้หลายๆอย่าง ได้พบผู้คนมากมาย ได้ทั้งออกแบบเว็บไซต์และทำงานให้กับหลายภาคส่วน ทั้ง ราชภัฎ ร้านหรอย หน่วยงานทหาร</p>
+                        </div>
+                      </a>      
+                    </li>
+                    </ul>
+
+
+                    <ul class="cards">
+                        <li>
+                          <a href="" class="card">
+                            <img src="image/6.jpg" class="card__image" alt="" />
+                            <div class="card__overlay">
+                              <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                <div class="card__header-text">
+                                  <h3 class="card__title">ผู้ช่วยวิทยากร อ.ลำปำ จ.พัทลุง</h3>            
+                                  <span class="card__status">กันยายน 2562</span>
+                                </div>
+                              </div>
+                              <p class="card__description">งานนี้สนุกและได้มีโอกาสรู้จักกับผู้คนใหม่ๆเยอะมากมาย เป็นงานที่มีความสุขงานนึงเลย</p>
+                            </div>
+                          </a>      
+                        </li>
+                        </ul>
+
+                <ul class="cards">
+                    <li>
+                      <a href="" class="card">
+                        <img src="image/4.jpg" class="card__image" alt="" />
+                        <div class="card__overlay">
+                          <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                            <div class="card__header-text">
+                              <h3 class="card__title">ผู้ช่วยวิทยากร ที่งานอบรมการใช้งานอินเทอร์เน็ต จ.สตูล</h3>            
+                              <span class="card__status">พฤษภาคม 2562</span>
+                            </div>
+                          </div>
+                          <p class="card__description">ออกไปดูงาน ทำอย่างอื่นที่ไม่เคยทำ เช่นการเดินสายแลน setup network เดินสายไฟ และเป็นผู้ช่วยวิทยากรบนเวที 20 วัน</p>
+                        </div>
+                      </a>      
+                    </li>
+                    </ul>
+
+                    <ul class="cards">
+                        <li>
+                          <a href="" class="card">
+                            <img src="image/5.jpg" class="card__image" alt="" />
+                            <div class="card__overlay">
+                              <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                                <div class="card__header-text">
+                                  <h3 class="card__title">ผู้ช่วยวิทยากร ราชภัฎ จ.สงขลา</h3>            
+                                  <span class="card__status">กันยายน 2562</span>
+                                </div>
+                              </div>
+                              <p class="card__description">เป็นอีกหนึ่งงานที่ค่อนข้างท้าทายตัวเองพอสมควร เพราะต้องเรียนและไปเป็นผู้ช่วยวิทยากรที่สงขลาพร้อมๆกัน การบริหารตารางเวลาจึงเป็นส่วนที่สำคัญมากๆ</p>
+                            </div>
+                          </a>      
+                        </li>
+                        </ul>
+                </div>
+
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
