@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html data-theme="dark">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,16 +7,40 @@
 
     <!-- Bootstrap CSS -->
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Suwijak Srikhao</title>
+    <script type="text/javascript">
+      // Wait for document to load
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.documentElement.setAttribute("data-theme", "light");
+    
+        // Get our button switcher
+        var themeSwitcher = document.getElementById("theme-switcher");
+    
+        // When our button gets clicked
+        themeSwitcher.onclick = function() {
+          // Get the current selected theme, on the first run
+          // it should be `light`
+          var currentTheme = document.documentElement.getAttribute("data-theme");
+    
+          // Switch between `dark` and `light`
+          var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+          // Set our currenet theme to the new one
+          document.documentElement.setAttribute("data-theme", switchToTheme);
+          localStorage.setItem("data-theme", switchToTheme);
+        }
+      });
+    </script>
   </head>
   <!--Nav-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button id="theme-switcher">Switch themes!</button>
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,137 +65,8 @@
     </div>
     </div>
   </nav>
-  <!--Nav end-->
-<style>
-body{
-    background-color:#1c1819!important;
-    color:white;
-    font-family: 'Kanit', sans-serif;
-}
-h1{
-    text-align: center;
-    padding:26rem;
-    color:white;
-}
-.bg-dark{
-    background-color:#1c1819!important;
-}
-
-:root {
-  --surface-color: #1c1819;
-  --curve: 40;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.cards {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 4rem 5vw;
-  padding: 0;
-  list-style-type: none;
-}
-
-.card {
-  position: relative;
-  display: block;
-  height: 100%;  
-  border-radius: calc(var(--curve) * 1px);
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.card__image {      
-  width: 100%;
-  height: auto;
-}
-
-.card__overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;      
-  border-radius: calc(var(--curve) * 1px);    
-  background-color: var(--surface-color);      
-  transform: translateY(100%);
-  transition: .2s ease-in-out;
-}
-
-.card:hover .card__overlay {
-  transform: translateY(0);
-}
-
-.card__header {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 2em;
-  padding: 2em;
-  border-radius: calc(var(--curve) * 1px) 0 0 0;    
-  background-color: var(--surface-color);
-  transform: translateY(-100%);
-  transition: .2s ease-in-out;
-}
-
-.card__arc {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;      
-  z-index: 1;
-}
-
-.card__arc path {
-  fill: var(--surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-}       
-
-.card:hover .card__header {
-  transform: translateY(0);
-}
-
-.card__title {
-  font-size: 1em;
-  margin: 0 0 .3em;
-  color: #ffffff;
-}
-
-.card__tagline {
-  display: block;
-  margin: 1em 0;
-  font-family: "MockFlowFont";  
-  font-size: .8em; 
-  color: #ffffff;  
-}
-
-.card__status {
-  font-size: .8em;
-  color: #ffffff;
-}
-
-.card__description {
-  padding: 0 2em 2em;
-  margin: 0;
-  color: #ffffff;
-  font-family: "MockFlowFont";   
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  background-color:#1c1819;
-}    
-.bd-masthead {
-    --bd-pink-rgb: 214,51,132;
-    padding: 3rem 0;
-    background-image: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), 0.01), rgba(var(--bs-body-bg-rgb), 1) 85%),radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), 0.5), transparent 50%),radial-gradient(ellipse at top right, rgba(var(--bd-accent-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center right, rgba(var(--bd-violet-rgb), 0.5), transparent 50%),radial-gradient(ellipse at center left, rgba(var(--bd-pink-rgb), 0.5), transparent 50%);
-}
-</style>
   <body>
-    <div class="container-fluid" style="background-color:#1c1819">
+    <div class="container-fluid bd">
         <h1>Suwijak Srikhao<p class="fs-5">This website is portfolio</p>
         <a type="submit" href="cert.html" class="btn btn-outline-light"><i class="bi bi-file-earmark-check-fill"></i>&nbsp;Certificate</a>
         <a type="submit" href="about.html" class="btn btn-outline-light"><i class="bi bi-file-earmark-person"></i>&nbsp;About Me</a>
@@ -419,7 +314,12 @@ h1{
                         </ul>
                 </div>
 
-    
+                <script type="text/javascript">
+                  // Wait for document to load
+                  document.addEventListener("DOMContentLoaded", function(event) {
+                    document.documentElement.setAttribute("data-theme", "dark");
+                  });
+                </script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
