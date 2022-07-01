@@ -15,32 +15,9 @@
     <link rel="stylesheet" href="docs.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Suwijak Srikhao</title>
-    <script type="text/javascript">
-      // Wait for document to load
-      document.addEventListener("DOMContentLoaded", function(event) {
-        document.documentElement.setAttribute("data-theme", "light");
-    
-        // Get our button switcher
-        var themeSwitcher = document.getElementById("theme-switcher");
-    
-        // When our button gets clicked
-        themeSwitcher.onclick = function() {
-          // Get the current selected theme, on the first run
-          // it should be `light`
-          var currentTheme = document.documentElement.getAttribute("data-theme");
-    
-          // Switch between `dark` and `light`
-          var switchToTheme = currentTheme === "dark" ? "light" : "dark"
-          // Set our currenet theme to the new one
-          document.documentElement.setAttribute("data-theme", switchToTheme);
-          localStorage.setItem("data-theme", switchToTheme);
-        }
-      });
-    </script>
   </head>
   <!--Nav-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button id="theme-switcher">Switch themes!</button>
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
